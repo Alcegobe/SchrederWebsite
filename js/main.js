@@ -51,6 +51,14 @@ document.querySelectorAll('[data-scroll]').forEach((btn) => {
   document.body.appendChild(a);
 })();
 
+// Header : transparent sur le hero, solide au défilement (V2)
+const siteHeader = document.querySelector('.site-header');
+if (siteHeader) {
+  const onScroll = () => siteHeader.classList.toggle('scrolled', window.scrollY > 60);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+}
+
 // Menu mobile (placeholder — le méga-menu sera défini plus tard)
 const burger = document.querySelector('.burger');
 if (burger) {
