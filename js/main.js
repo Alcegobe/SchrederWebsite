@@ -3,11 +3,14 @@
 // Logo : on tente de charger le vrai fichier ; repli sur le logo texte sinon.
 // Dépose le SVG dans assets/Logo-Schreder-Black-Left.svg et il apparaît tout seul.
 document.querySelectorAll('.logo').forEach((logo) => {
+  const invert = logo.classList.contains('logo--invert'); // footer sombre -> version blanche
   const img = document.createElement('img');
   img.className = 'logo__img';
   img.alt = 'Schréder — Experts in lightability';
   img.addEventListener('load', () => logo.classList.add('has-logo-img'));
-  img.src = 'assets/Logo-Schreder-Black-Left.svg';
+  img.src = invert
+    ? 'assets/Logo-Schreder-White-Left.svg'
+    : 'assets/Logo-Schreder-Black-Left.svg';
   logo.prepend(img);
 });
 
