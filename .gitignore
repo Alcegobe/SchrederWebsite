@@ -1,0 +1,6 @@
+# Previews générés (captures de la maquette)
+preview-*.png
+
+# Dépendances / système
+node_modules/
+.DS_Store
