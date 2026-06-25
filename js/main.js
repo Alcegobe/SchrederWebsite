@@ -58,11 +58,12 @@ if (siteHeader) {
       var el = e.target; io.unobserve(el);
       el.classList.add('in');
       if (reduce || el._target === undefined) { el.textContent = el._raw; return; }
-      var dur = 1100, start = null;
+      var dur = 1500, start = null;
       function step(ts) {
         if (start === null) start = ts;
         var p = Math.min((ts - start) / dur, 1);
-        var eased = 1 - Math.pow(1 - p, 3);
+        // ease-in-out : démarrage lent, accélération, fin lente
+        var eased = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
         el.textContent = el._prefix + format(el._target * eased, el) + el._suffix;
         if (p < 1) requestAnimationFrame(step); else el.textContent = el._raw;
       }
@@ -72,10 +73,23 @@ if (siteHeader) {
   els.forEach(function (el) { io.observe(el); });
 })();
 
-// Menu mobile (placeholder — le méga-menu sera défini plus tard)
-const burger = document.querySelector('.burger');
-if (burger) {
-  burger.addEventListener('click', () => {
-    alert('Header / navigation : à concevoir dans une prochaine itération.');
-  });
+// Menu mobile volant (overlay glass)
+const burger = document.getElementById('burger');
+const mobileMenu = document.getElementById('mobileMenu');
+if (burger && mobileMenu) {
+  const open = () => {
+    mobileMenu.classList.add('open');
+    document.body.classList.add('menu-open');
+    burger.setAttribute('aria-expanded', 'true');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+  };
+  const close = () => {
+    mobileMenu.classList.remove('open');
+    document.body.classList.remove('menu-open');
+    burger.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+  };
+  burger.addEventListener('click', () => (mobileMenu.classList.contains('open') ? close() : open()));
+  mobileMenu.querySelectorAll('[data-menu-close]').forEach((el) => el.addEventListener('click', close));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
 }

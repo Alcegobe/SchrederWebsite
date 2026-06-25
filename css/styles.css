@@ -578,7 +578,7 @@ body[data-version="v2"] .site-header.scrolled .logo__tag { color: var(--ink-3); 
 /* =============================================================
    Chiffres clés — plus grands, un peu plus épais, reveal classe
    ============================================================= */
-.kpi__num, .case__metric, .sus-pillar__metric, .hero__card-num { font-weight: 400; }
+.kpi__num, .case__metric, .sus-pillar__metric, .hero__card-num { font-weight: 500; }
 .kpi__num { font-size: clamp(2.2rem, 4.2vw, 3.1rem); }
 .case__metric { font-size: 1.95rem; }
 .hero__card-num { font-size: 2.6rem; }
@@ -587,3 +587,36 @@ body[data-version="v2"] .site-header.scrolled .logo__tag { color: var(--ink-3); 
 .statnum.prep { opacity: 0; transform: translateY(12px); }
 .statnum.in { opacity: 1; transform: none; transition: opacity .7s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
 @media (prefers-reduced-motion: reduce) { .statnum.prep { opacity: 1; transform: none; } }
+
+/* =============================================================
+   Menu mobile volant (overlay glass)
+   ============================================================= */
+.burger { color: var(--ink); }
+.mobile-menu {
+  position: fixed; inset: 0; z-index: 70;
+  display: flex; flex-direction: column; padding: 92px 28px 40px;
+  background: rgba(16,20,28,.55);
+  -webkit-backdrop-filter: blur(26px) saturate(140%); backdrop-filter: blur(26px) saturate(140%);
+  color: #fff; opacity: 0; visibility: hidden; transform: translateY(-10px);
+  transition: opacity .28s ease, transform .3s cubic-bezier(.2,.7,.2,1), visibility .28s;
+}
+.mobile-menu.open { opacity: 1; visibility: visible; transform: none; }
+.mobile-menu__close { position: absolute; top: 22px; right: 22px; background: none; border: none; color: #fff; font-size: 1.5rem; line-height: 1; cursor: pointer; }
+.mobile-menu__nav { display: flex; flex-direction: column; }
+.mobile-menu__nav a { color: #fff; text-decoration: none; font-size: 1.6rem; font-weight: 300; letter-spacing: -.01em; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.12); }
+.mobile-menu__actions { margin-top: auto; display: flex; flex-direction: column; gap: 16px; align-items: stretch; }
+.mobile-menu__actions .btn { width: 100%; }
+.mobile-menu__lang { color: rgba(255,255,255,.8); font-size: .95rem; }
+body.menu-open { overflow: hidden; }
+@media (min-width: 981px) { .mobile-menu { display: none; } }
+
+/* Header mobile : logo + burger uniquement ; le reste passe dans l'overlay */
+@media (max-width: 980px) {
+  .site-header .header__actions { display: none; }
+  .burger { display: block; margin-left: auto; }
+}
+body[data-version="v2"] .site-header:not(.scrolled) .burger { color: #fff; }
+body[data-version="v2"] .site-header.scrolled .burger { color: var(--ink); }
+
+/* CTA du menu mobile : blanc pour contraste sur le verre sombre */
+.mobile-menu .btn--primary { background: #fff; color: var(--ink); border-color: #fff; }

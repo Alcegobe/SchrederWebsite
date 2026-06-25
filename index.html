@@ -33,9 +33,26 @@
         <span class="nav-item">🌐 EN</span>
         <button class="btn btn--sm btn--primary">speak with an expert</button>
       </div>
-      <button class="burger" aria-label="Menu">≡</button>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">≡</button>
     </div>
   </header>
+
+  <!-- Menu mobile volant (overlay glass) -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <button class="mobile-menu__close" data-menu-close aria-label="Fermer">✕</button>
+    <nav class="mobile-menu__nav" aria-label="Navigation mobile">
+      <a data-menu-close href="#">solutions</a>
+      <a data-menu-close href="#">products</a>
+      <a data-menu-close href="#">services</a>
+      <a data-menu-close href="#">sustainability</a>
+      <a data-menu-close href="#">projects</a>
+      <a data-menu-close href="#">insights</a>
+    </nav>
+    <div class="mobile-menu__actions">
+      <button class="btn btn--primary btn--lg" data-menu-close>speak with an expert</button>
+      <span class="mobile-menu__lang">🌐 EN · choose your country</span>
+    </div>
+  </div>
 
   <main>
     <!-- ============================================================= -->
