@@ -117,6 +117,10 @@ body.no-annotations .header__note { display: none; }
 .site-header { position: sticky; top: 0; z-index: 40; background: var(--bg); border-bottom: 1px solid var(--line); }
 .header__inner { display: flex; align-items: center; gap: 28px; height: 68px; }
 .logo { line-height: 1.1; }
+.logo__img { display: none; height: 32px; width: auto; }
+.logo.has-logo-img .logo__img { display: block; }
+.logo.has-logo-img strong, .logo.has-logo-img .logo__tag { display: none; }
+.logo--invert.has-logo-img .logo__img { filter: invert(1) brightness(2); } /* stopgap : logo noir sur fond sombre */
 .logo strong { font-size: 1.25rem; letter-spacing: -.02em; display: block; }
 .logo__tag { font-size: .62rem; color: var(--ink-3); letter-spacing: .02em; }
 .main-nav { display: flex; gap: 20px; }

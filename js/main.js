@@ -1,5 +1,16 @@
 // Wireframe — interactions minimales
 
+// Logo : on tente de charger le vrai fichier ; repli sur le logo texte sinon.
+// Dépose le SVG dans assets/Logo-Schreder-Black-Left.svg et il apparaît tout seul.
+document.querySelectorAll('.logo').forEach((logo) => {
+  const img = document.createElement('img');
+  img.className = 'logo__img';
+  img.alt = 'Schréder — Experts in lightability';
+  img.addEventListener('load', () => logo.classList.add('has-logo-img'));
+  img.src = 'assets/Logo-Schreder-Black-Left.svg';
+  logo.prepend(img);
+});
+
 // Toggle des annotations wireframe
 const toggle = document.getElementById('wfToggle');
 if (toggle) {
