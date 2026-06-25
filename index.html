@@ -1,31 +1,50 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Schréder — Homepage (Wireframe)</title>
-  <meta name="description" content="Maquette wireframe de la nouvelle homepage Schréder — smart, secure & sustainable outdoor lighting." />
+  <meta name="description" content="Wireframe de la nouvelle homepage Schréder — même contenu, présentation modernisée." />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#hero">Aller au contenu</a>
 
   <!-- ============================================================= -->
-  <!-- HEADER (placeholder — à définir dans une itération ultérieure) -->
+  <!-- BARRE PAYS (utility bar)                                       -->
+  <!-- ============================================================= -->
+  <div class="utilbar" id="utilbar">
+    <div class="container utilbar__inner">
+      <span>Choose your country to have specific content related to your location</span>
+      <span class="select ph-text">Netherlands ▾</span>
+      <button class="btn btn--sm">Continue</button>
+      <button class="utilbar__close" aria-label="Fermer" data-close>✕</button>
+    </div>
+  </div>
+
+  <!-- ============================================================= -->
+  <!-- HEADER (placeholder — non traité à ce stade)                   -->
   <!-- ============================================================= -->
   <header class="site-header" id="header">
     <div class="container header__inner">
-      <div class="logo ph-text">LOGO</div>
+      <div class="logo">
+        <strong>Schréder</strong>
+        <span class="logo__tag">Experts in lightability™</span>
+      </div>
       <nav class="main-nav" aria-label="Navigation principale (placeholder)">
-        <span class="nav-item">What we do</span>
+        <span class="nav-item">Solutions</span>
         <span class="nav-item">Products</span>
+        <span class="nav-item">Services</span>
+        <span class="nav-item">Sustainability</span>
         <span class="nav-item">Projects</span>
         <span class="nav-item">Insights</span>
-        <span class="nav-item">About</span>
       </nav>
       <div class="header__actions">
-        <span class="nav-item">EN ▾</span>
-        <button class="btn btn--sm">Contact</button>
+        <span class="nav-item">Careers</span>
+        <span class="nav-item">About us</span>
+        <span class="icon-btn" title="Search">⌕</span>
+        <span class="icon-btn" title="Language">🌐</span>
+        <span class="icon-btn" title="Contact">✉</span>
       </div>
       <button class="burger" aria-label="Menu">≡</button>
     </div>
@@ -37,364 +56,263 @@
     <!-- 01 · HERO                                                      -->
     <!-- ============================================================= -->
     <section class="hero section" id="hero" data-tag="01 · HERO">
-      <div class="container hero__grid">
-        <div class="hero__copy">
-          <p class="eyebrow">Smart · Secure · Sustainable</p>
-          <h1>Lighting the cities people love to live in</h1>
-          <p class="lead">
-            Schréder conçoit des solutions d'éclairage extérieur intelligentes et durables
-            qui rendent les espaces publics plus sûrs, plus verts et plus connectés —
-            dans plus de 70 pays depuis 1907.
-          </p>
+      <div class="hero__media ph" data-label="Visuel hero — hub de transport éclairé la nuit"></div>
+      <div class="hero__overlay">
+        <div class="container hero__content">
+          <p class="eyebrow">Schréder</p>
+          <h1>Sustainable &amp; Smart Lighting Solutions</h1>
+          <p class="lead">Light up your city, optimise your energy.</p>
           <div class="btn-row">
-            <button class="btn btn--primary">Explore our solutions</button>
-            <button class="btn btn--ghost">▶ Discover Schréder EXEDRA</button>
+            <button class="btn btn--primary">Contact us</button>
+            <button class="btn btn--ghost-light">Discover our solutions</button>
           </div>
-          <ul class="hero__chips">
-            <li>🌍 70+ pays</li>
-            <li>💡 2M+ points lumineux / an</li>
-            <li>♻️ EcoVadis Gold 2025</li>
-          </ul>
         </div>
-        <div class="hero__media ph ph--tall" data-label="Visuel hero — ville éclairée la nuit / vidéo"></div>
+      </div>
+      <ul class="hero__social" aria-label="Réseaux sociaux">
+        <li class="ph-icon ph-icon--sm">in</li>
+        <li class="ph-icon ph-icon--sm">◎</li>
+        <li class="ph-icon ph-icon--sm">▶</li>
+      </ul>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 02 · IN THE SPOTLIGHT                                          -->
+    <!-- ============================================================= -->
+    <section class="section spotlight" data-tag="02 · IN THE SPOTLIGHT">
+      <div class="container">
+        <h2 class="spotlight__title">In the Spotlight</h2>
+        <div class="spotlight__grid">
+          <!-- Carte campagne -->
+          <article class="promo">
+            <div class="promo__media ph" data-label="Visuel — Schréder SENSE ONE">
+              <div class="promo__badge">
+                <strong>Schréder</strong><br />SENSE ONE
+                <span class="promo__powered">powered by edgemachines</span>
+              </div>
+            </div>
+            <div class="promo__copy">
+              <p>Your lighting network. One multi-domain sensor. <strong>Endless insights.</strong></p>
+            </div>
+          </article>
+
+          <!-- Actu mise en avant (carousel) -->
+          <article class="feature-news">
+            <p class="eyebrow">Featured news</p>
+            <h3>Schréder acquires EdgeMachines to deliver smarter urban services and enhance city life</h3>
+            <p>
+              Following a successful year-long partnership deploying projects internationally,
+              this acquisition is a natural evolution driven by a shared vision to help cities
+              become more sustainable and resilient by providing real-time data.
+            </p>
+            <span class="link">Read more →</span>
+            <div class="dots" aria-hidden="true">
+              <span class="dot dot--on"></span><span class="dot"></span><span class="dot"></span>
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- ============================================================= -->
-    <!-- 02 · BANDEAU STATISTIQUES / CONFIANCE                          -->
+    <!-- 03 · WHAT'S NEW?                                               -->
     <!-- ============================================================= -->
-    <section class="stats section" data-tag="02 · KEY FIGURES">
-      <div class="container stats__grid">
-        <div class="stat">
-          <span class="stat__num">1907</span>
-          <span class="stat__label">Fondée à Liège, Belgique</span>
+    <section class="section whatsnew" data-tag="03 · WHAT'S NEW">
+      <div class="container">
+        <div class="section-head section-head--row">
+          <h2>What's New?</h2>
+          <button class="btn btn--ghost">All news →</button>
         </div>
-        <div class="stat">
-          <span class="stat__num">70+</span>
-          <span class="stat__label">Pays sur 5 continents</span>
+        <div class="cards cards--3">
+          <a class="article">
+            <div class="ph article__media" data-label="BRITELINE — sport"></div>
+            <p class="article__meta">22 May 2026</p>
+            <h3>Bring professional-level lighting performance to your sports venue</h3>
+            <p class="article__body">
+              The BRITELINE floodlight range is now FIFA Quality Pro approved, giving sports venues
+              the confidence to meet the highest standards of professional lighting — with precise
+              light control and long-term operational value.
+            </p>
+            <span class="link">Read more →</span>
+          </a>
+          <a class="article">
+            <div class="ph article__media" data-label="ALTARA — off-grid"></div>
+            <p class="article__meta">10 April 2026</p>
+            <h3>ALTARA | 100% off-grid, zero infrastructure constraints</h3>
+            <p class="article__body">
+              ALTARA makes lighting projects possible without electrical infrastructure. Its decoupled
+              solar architecture separates the power unit from the light source for optimal solar
+              exposure, even in space-restricted locations.
+            </p>
+            <span class="link">Read more →</span>
+          </a>
+          <a class="article">
+            <div class="ph article__media" data-label="TFLEX GEN2 — tunnels"></div>
+            <p class="article__meta">9 April 2026</p>
+            <h3>TFLEX GEN2 redefines tunnel lighting flexibility</h3>
+            <p class="article__body">
+              A new generation of modular tunnel lighting designed for higher efficiency, simplified
+              operations and long-term sustainability — a complete, end-to-end solution from a single
+              trusted partner.
+            </p>
+            <span class="link">Read more →</span>
+          </a>
         </div>
-        <div class="stat">
-          <span class="stat__num">2M+</span>
-          <span class="stat__label">Points lumineux vendus / an</span>
-        </div>
-        <div class="stat">
-          <span class="stat__num">33</span>
-          <span class="stat__label">Implantations dans le monde</span>
+        <div class="dots dots--center" aria-hidden="true">
+          <span class="dot dot--on"></span><span class="dot"></span><span class="dot"></span>
         </div>
       </div>
     </section>
 
     <!-- ============================================================= -->
-    <!-- 03 · PILIERS : SMART / SECURE / SUSTAINABLE                    -->
+    <!-- 04 · FEATURE — TRANSPORT HUBS (bande alternée)                 -->
     <!-- ============================================================= -->
-    <section class="section pillars" data-tag="03 · NOTRE PROMESSE">
+    <section class="section feature" data-tag="04 · FEATURE — SEGMENT">
+      <div class="container feature__grid">
+        <div class="feature__media ph ph--tall" data-label="Hub de transport — gare / aéroport"></div>
+        <div class="feature__copy">
+          <p class="eyebrow">Markets</p>
+          <h2>Sustainable Lighting for your Transport Hubs</h2>
+          <p>
+            More than ever, people are on the move. At Schréder, we have been lighting outdoor spaces —
+            including ports, railway stations, airports and motorways — for decades. We listen to our
+            customers' requirements and find solutions that ensure safe and sustainable spaces that meet
+            expectations and standards.
+          </p>
+          <button class="btn btn--primary">Discover our transport solutions</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 05 · PORTFOLIO COMPLET                                         -->
+    <!-- ============================================================= -->
+    <section class="section portfolio" data-tag="05 · PORTFOLIO">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Notre approche</p>
-          <h2>Une expertise unique : la Lightability™</h2>
+          <h2>A trusted partner with a complete portfolio</h2>
           <p class="section-head__sub">
-            Nous transformons l'éclairage en infrastructure intelligente au service des
-            habitants, des villes et de la planète.
+            Working alongside you, we provide comprehensive solutions and expertise for long-lasting impact.
           </p>
         </div>
-        <div class="cards cards--3">
-          <article class="card">
-            <div class="card__icon ph-icon">◇</div>
-            <h3>Smart</h3>
-            <p>Luminaires connectés et pilotage IoT centralisé, du capteur à la donnée actionnable.</p>
+      </div>
+      <div class="portfolio__scroller" id="portfolioScroller">
+        <div class="container portfolio__row">
+          <article class="pf-card">
+            <div class="ph pf-card__media" data-label="Poles & Brackets"></div>
+            <h3>Poles &amp; Brackets</h3>
+            <p>Sturdy poles and brackets to install in a safe and reliable manner.</p>
+            <span class="link">Read more →</span>
           </article>
-          <article class="card">
-            <div class="card__icon ph-icon">◇</div>
-            <h3>Secure</h3>
-            <p>Cybersécurité de bout en bout, certifiée ISO/IEC 27001 pour protéger les villes.</p>
+          <article class="pf-card">
+            <div class="ph pf-card__media" data-label="Smart Poles"></div>
+            <h3>Smart Poles</h3>
+            <p>Multi-functional smart poles for connected, future-ready public and private spaces.</p>
+            <span class="link">Read more →</span>
           </article>
-          <article class="card">
-            <div class="card__icon ph-icon">◇</div>
-            <h3>Sustainable</h3>
-            <p>Économies d'énergie, réduction de la pollution lumineuse, trajectoire alignée Paris.</p>
+          <article class="pf-card pf-card--active">
+            <div class="ph pf-card__media" data-label="Control Systems"></div>
+            <h3>Control Systems</h3>
+            <p>Smart lighting control to cut costs, boost efficiency and scale smart city infrastructure.</p>
+            <span class="link">Read more →</span>
+          </article>
+          <article class="pf-card">
+            <div class="ph pf-card__media" data-label="Solar"></div>
+            <h3>Solar</h3>
+            <p>Plug-and-play connected solar lighting solution for sustainable streets and outdoor spaces.</p>
+            <span class="link">Read more →</span>
+          </article>
+          <article class="pf-card">
+            <div class="ph pf-card__media" data-label="Retrofit Solutions"></div>
+            <h3>Retrofit Solutions</h3>
+            <p>Smart retrofit lighting to modernise existing fixtures, reduce energy use and extend asset life.</p>
+            <span class="link">Read more →</span>
           </article>
         </div>
+      </div>
+      <div class="container portfolio__nav">
+        <button class="round-btn" data-scroll="-1" aria-label="Précédent">‹</button>
+        <button class="round-btn" data-scroll="1" aria-label="Suivant">›</button>
       </div>
     </section>
 
     <!-- ============================================================= -->
-    <!-- 04 · WHAT WE DO — MARCHÉS / APPLICATIONS                       -->
+    <!-- 06 · FEATURE — PRESERVING ECOSYSTEMS (bande alternée)          -->
     <!-- ============================================================= -->
-    <section class="section markets" data-tag="04 · WHAT WE DO">
-      <div class="container">
-        <div class="section-head section-head--row">
-          <div>
-            <p class="eyebrow">What we do</p>
-            <h2>Des solutions pour chaque espace public</h2>
-          </div>
-          <button class="btn btn--ghost">Tous les marchés →</button>
-        </div>
-        <div class="cards cards--grid">
-          <a class="tile">
-            <div class="ph tile__media" data-label="Routes & mobilité"></div>
-            <div class="tile__body">
-              <h3>Routes &amp; mobilité</h3>
-              <p>Sécuriser les déplacements, protéger le ciel et la faune.</p>
-              <span class="link">En savoir plus →</span>
-            </div>
-          </a>
-          <a class="tile">
-            <div class="ph tile__media" data-label="Espaces urbains & résidentiels"></div>
-            <div class="tile__body">
-              <h3>Espaces urbains &amp; résidentiels</h3>
-              <p>Des lieux de vie plus conviviaux et plus sûrs.</p>
-              <span class="link">En savoir plus →</span>
-            </div>
-          </a>
-          <a class="tile">
-            <div class="ph tile__media" data-label="Parcs & espaces piétons"></div>
-            <div class="tile__body">
-              <h3>Parcs &amp; espaces piétons</h3>
-              <p>Un éclairage doux et juste, là où il est nécessaire.</p>
-              <span class="link">En savoir plus →</span>
-            </div>
-          </a>
-          <a class="tile">
-            <div class="ph tile__media" data-label="Tunnels"></div>
-            <div class="tile__body">
-              <h3>Tunnels</h3>
-              <p>Solutions modulaires, end-to-end, hautement efficaces.</p>
-              <span class="link">En savoir plus →</span>
-            </div>
-          </a>
-          <a class="tile">
-            <div class="ph tile__media" data-label="Solaire & hors-réseau"></div>
-            <div class="tile__body">
-              <h3>Solaire &amp; hors-réseau</h3>
-              <p>Éclairer sans infrastructure électrique, partout.</p>
-              <span class="link">En savoir plus →</span>
-            </div>
-          </a>
-          <a class="tile">
-            <div class="ph tile__media" data-label="Patrimoine & architectural"></div>
-            <div class="tile__body">
-              <h3>Patrimoine &amp; architectural</h3>
-              <p>Mettre en lumière les lieux qui font l'identité des villes.</p>
-              <span class="link">En savoir plus →</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================= -->
-    <!-- 05 · SPOTLIGHT PLATEFORME : SCHRÉDER EXEDRA                    -->
-    <!-- ============================================================= -->
-    <section class="section spotlight" data-tag="05 · PLATFORM SPOTLIGHT">
-      <div class="container spotlight__grid">
-        <div class="spotlight__media ph ph--tall" data-label="Dashboard Schréder EXEDRA (UI)"></div>
-        <div class="spotlight__copy">
-          <p class="eyebrow">Connected platform</p>
-          <h2>Schréder EXEDRA — pilotez tout votre réseau d'éclairage</h2>
-          <p class="lead">
-            Une plateforme IoT unique pour superviser, optimiser et sécuriser chaque luminaire,
-            en temps réel.
+    <section class="section feature feature--reverse" data-tag="06 · FEATURE — EXPERTISE">
+      <div class="container feature__grid">
+        <div class="feature__copy">
+          <p class="eyebrow">Expertise</p>
+          <h2>Preserving Ecosystems with Eco-Friendly Outdoor Lighting</h2>
+          <p>
+            Turning off cities at night is not a viable solution. Lighting is essential for the safety and
+            well-being of people as they move about for work or leisure. We need to create safe spaces to
+            sustain human activity at night, but it is also critical to preserve the surrounding natural
+            environment. With the right lighting expertise and solutions, getting the balance right is
+            entirely possible.
           </p>
-          <ul class="check-list">
-            <li>Suivi de la consommation, des heures de fonctionnement et du dimming</li>
-            <li>Adaptation en temps réel au trafic et à la météo avec LightSync</li>
-            <li>Indicateurs concrets : kWh économisés, CO₂ évité, classes d'éclairage</li>
-            <li>Sécurisé par conception — ISO/IEC 27001:2022</li>
-          </ul>
-          <button class="btn btn--primary">Découvrir la plateforme</button>
+          <button class="btn btn--primary">Discover more about our expertise</button>
         </div>
+        <div class="feature__media ph ph--tall" data-label="Nature de nuit — biodiversité"></div>
       </div>
     </section>
 
     <!-- ============================================================= -->
-    <!-- 06 · PRODUITS PHARES                                           -->
+    <!-- 07 · CONNECT WITH YOUR LOCAL CONTACT                           -->
     <!-- ============================================================= -->
-    <section class="section products" data-tag="06 · FEATURED PRODUCTS">
-      <div class="container">
-        <div class="section-head section-head--row">
-          <div>
-            <p class="eyebrow">Products</p>
-            <h2>Nos produits phares</h2>
-          </div>
-          <button class="btn btn--ghost">Tout le catalogue →</button>
-        </div>
-        <div class="cards cards--4">
-          <article class="product">
-            <div class="ph product__media" data-label="IZYLUM"></div>
-            <p class="product__cat">Éclairage routier</p>
-            <h3>IZYLUM</h3>
-            <p>Polyvalent et performant, de la rue résidentielle au boulevard.</p>
-            <span class="link">Voir le produit →</span>
-          </article>
-          <article class="product">
-            <div class="ph product__media" data-label="ALBANY"></div>
-            <p class="product__cat">Design classique</p>
-            <h3>ALBANY</h3>
-            <p>L'esthétique intemporelle alliée à la technologie LED moderne.</p>
-            <span class="link">Voir le produit →</span>
-          </article>
-          <article class="product">
-            <div class="ph product__media" data-label="SHUFFLE"></div>
-            <p class="product__cat">Colonne multiservice</p>
-            <h3>SHUFFLE</h3>
-            <p>Une colonne urbaine modulaire qui évolue avec l'espace public.</p>
-            <span class="link">Voir le produit →</span>
-          </article>
-          <article class="product">
-            <div class="ph product__media" data-label="ALTARA"></div>
-            <p class="product__cat">Solaire</p>
-            <h3>ALTARA</h3>
-            <p>Architecture solaire découplée pour les sites hors-réseau.</p>
-            <span class="link">Voir le produit →</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================= -->
-    <!-- 07 · BANDEAU DURABILITÉ                                        -->
-    <!-- ============================================================= -->
-    <section class="section sustainability" data-tag="07 · SUSTAINABILITY">
-      <div class="container sustainability__grid">
-        <div class="sustainability__copy">
-          <p class="eyebrow">Sustainability</p>
-          <h2>Éclairer un avenir durable</h2>
-          <p class="lead">
-            Notre engagement est aligné sur l'Accord de Paris. Chaque luminaire connecté
-            contribue à des villes plus sobres en énergie et en carbone.
-          </p>
-          <button class="btn btn--primary">Lire notre rapport durabilité</button>
-        </div>
-        <div class="sustainability__stats">
-          <div class="stat stat--invert">
-            <span class="stat__num">-52,5%</span>
-            <span class="stat__label">Émissions Scope 1 &amp; 2 d'ici 2030</span>
-          </div>
-          <div class="stat stat--invert">
-            <span class="stat__num">Gold</span>
-            <span class="stat__label">EcoVadis 2025 — 83/100</span>
-          </div>
-          <div class="stat stat--invert">
-            <span class="stat__num">-27,5%</span>
-            <span class="stat__label">Émissions Scope 3 d'ici 2030</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================= -->
-    <!-- 08 · PROJETS / RÉFÉRENCES                                      -->
-    <!-- ============================================================= -->
-    <section class="section projects" data-tag="08 · PROJECTS">
-      <div class="container">
-        <div class="section-head section-head--row">
-          <div>
-            <p class="eyebrow">Projects</p>
-            <h2>Cities people love to live in</h2>
-          </div>
-          <button class="btn btn--ghost">Tous les projets →</button>
-        </div>
-        <div class="cards cards--3">
-          <a class="project">
-            <div class="ph project__media" data-label="Projet — Ville A"></div>
-            <div class="project__body">
-              <span class="tag">Espaces urbains</span>
-              <h3>Réaménagement d'un centre-ville</h3>
-              <p>Ville A, Pays — éclairage connecté &amp; durable.</p>
-            </div>
-          </a>
-          <a class="project">
-            <div class="ph project__media" data-label="Projet — Ville B"></div>
-            <div class="project__body">
-              <span class="tag">Routes</span>
-              <h3>Autoroute intelligente</h3>
-              <p>Ville B, Pays — LightSync &amp; pilotage EXEDRA.</p>
-            </div>
-          </a>
-          <a class="project">
-            <div class="ph project__media" data-label="Projet — Ville C"></div>
-            <div class="project__body">
-              <span class="tag">Solaire</span>
-              <h3>Éclairage off-grid</h3>
-              <p>Ville C, Pays — solution autonome ALTARA.</p>
-            </div>
-          </a>
-        </div>
-
-        <!-- Citation / témoignage -->
-        <blockquote class="quote">
-          <p>« Une citation client mettant en avant l'impact du projet sur les habitants
-            et la ville. »</p>
-          <footer><span class="ph-text">Nom</span> — Fonction, Ville</footer>
-        </blockquote>
-      </div>
-    </section>
-
-    <!-- ============================================================= -->
-    <!-- 09 · INSIGHTS / NEWS                                           -->
-    <!-- ============================================================= -->
-    <section class="section insights" data-tag="09 · INSIGHTS & NEWS">
-      <div class="container">
-        <div class="section-head section-head--row">
-          <div>
-            <p class="eyebrow">Insights</p>
-            <h2>Actualités &amp; ressources</h2>
-          </div>
-          <button class="btn btn--ghost">Tout voir →</button>
-        </div>
-        <div class="cards cards--3">
-          <a class="article">
-            <div class="ph article__media" data-label="Article 1"></div>
-            <span class="tag">Article</span>
-            <h3>Titre de l'article ou de l'actualité</h3>
-            <p class="article__meta">25 juin 2026 · 4 min de lecture</p>
-          </a>
-          <a class="article">
-            <div class="ph article__media" data-label="Article 2"></div>
-            <span class="tag">Étude de cas</span>
-            <h3>Titre de l'étude de cas</h3>
-            <p class="article__meta">18 juin 2026 · 6 min de lecture</p>
-          </a>
-          <a class="article">
-            <div class="ph article__media" data-label="Article 3"></div>
-            <span class="tag">Livre blanc</span>
-            <h3>Titre du livre blanc ou guide</h3>
-            <p class="article__meta">10 juin 2026 · Téléchargement</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================= -->
-    <!-- 10 · CTA FINAL                                                 -->
-    <!-- ============================================================= -->
-    <section class="section cta" data-tag="10 · FINAL CTA">
-      <div class="container cta__inner">
-        <h2>Construisons ensemble l'avenir de l'éclairage public</h2>
-        <p class="lead">Nos équipes locales vous accompagnent, partout dans le monde.</p>
-        <div class="btn-row btn-row--center">
-          <button class="btn btn--primary">Parler à un expert</button>
-          <button class="btn btn--ghost">Trouver mon contact local</button>
-        </div>
+    <section class="section localcontact" data-tag="07 · LOCAL CONTACT">
+      <div class="container localcontact__inner">
+        <h2>Connect with your local contact</h2>
+        <p class="lead">Our teams are present in over 70 countries to support your projects.</p>
+        <button class="btn btn--primary">Choose your country</button>
       </div>
     </section>
   </main>
 
   <!-- ============================================================= -->
-  <!-- FOOTER (placeholder)                                           -->
+  <!-- FOOTER                                                         -->
   <!-- ============================================================= -->
   <footer class="site-footer" data-tag="FOOTER">
-    <div class="container footer__grid">
-      <div class="footer__col">
-        <div class="logo logo--invert ph-text">LOGO</div>
-        <p class="footer__tag">Smart · Secure · Sustainable lighting</p>
+    <div class="container">
+      <div class="footer__top">
+        <div class="logo logo--invert">
+          <strong>Schréder</strong>
+          <span class="logo__tag">Experts in lightability™</span>
+        </div>
+        <ul class="footer__social" aria-label="Réseaux sociaux">
+          <li class="ph-icon ph-icon--sm ph-icon--invert">in</li>
+          <li class="ph-icon ph-icon--sm ph-icon--invert">𝕏</li>
+          <li class="ph-icon ph-icon--sm ph-icon--invert">◎</li>
+          <li class="ph-icon ph-icon--sm ph-icon--invert">▶</li>
+          <li class="ph-icon ph-icon--sm ph-icon--invert">P</li>
+        </ul>
       </div>
-      <div class="footer__col"><h4>What we do</h4><span>·····</span><span>·····</span><span>·····</span></div>
-      <div class="footer__col"><h4>Products</h4><span>·····</span><span>·····</span><span>·····</span></div>
-      <div class="footer__col"><h4>Company</h4><span>·····</span><span>·····</span><span>·····</span></div>
-      <div class="footer__col"><h4>Contact</h4><span>·····</span><span>·····</span><span>·····</span></div>
+
+      <div class="footer__grid">
+        <nav class="footer__col">
+          <h4>Solutions &amp; Expertise</h4>
+          <span>Solutions</span><span>Products</span><span>Services</span><span>Sustainability</span>
+        </nav>
+        <nav class="footer__col">
+          <h4>Inspiration</h4>
+          <span>Projects</span><span>Insights</span><span>Knowledge</span>
+        </nav>
+        <nav class="footer__col">
+          <h4>Schréder</h4>
+          <span>Who We Are</span><span>Our Commitment</span><span>Careers</span><span>Contact Us</span>
+        </nav>
+        <nav class="footer__col">
+          <h4>Tools</h4>
+          <span>Downloads</span><span>Smart Label Portal</span><span>Software &amp; Plug-ins</span><span>Brochures</span>
+        </nav>
+      </div>
+
+      <div class="footer__legal">
+        <span>Privacy Policy</span><span>Cookies Policy</span><span>Terms of Use</span>
+        <span>Code of Conduct for Suppliers</span><span>Win Line</span><span>Manage Cookies</span>
+        <span class="footer__copy">Change Country · © Schréder 2026</span>
+      </div>
     </div>
-    <p class="footer__note">Footer détaillé — à définir dans une itération ultérieure</p>
   </footer>
 
   <!-- Toggle annotations wireframe -->
