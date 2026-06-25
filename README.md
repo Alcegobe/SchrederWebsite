@@ -5,9 +5,20 @@ Principe : **même contenu que la page actuelle**, mais une **présentation mode
 Objectif : valider la structure et le parcours avant le design final (couleurs de
 marque, typographies, visuels).
 
+## Deux versions
+
+- **`index.html` — V2 « marketing-optimisée »** : applique les recommandations de l'audit
+  (proposition de valeur, preuve, parcours par besoin, études de cas chiffrées, CTA clair).
+  Chaque section porte une note bleue indiquant le problème corrigé (visible quand les
+  annotations sont ON).
+- **`faithful.html` — V1 « fidèle »** : reprend le contenu/ordre de la page actuelle, en
+  présentation modernisée. Conservée pour comparaison.
+
+Un bouton flottant en bas à gauche permet de **basculer V1 ⇄ V2**.
+
 ## Aperçu
 
-- `index.html` — la homepage
+- `index.html` — la homepage (V2)
 - `css/styles.css` — styles (palette neutre wireframe, responsive)
 - `js/main.js` — interactions (toggle annotations, scroll portfolio, barre pays, menu mobile placeholder)
 - `.github/workflows/deploy-pages.yml` — déploiement de la maquette sur GitHub Pages

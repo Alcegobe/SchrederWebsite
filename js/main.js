@@ -27,6 +27,16 @@ document.querySelectorAll('[data-scroll]').forEach((btn) => {
   });
 });
 
+// Sélecteur de version V1 (fidèle) ⇄ V2 (marketing)
+(function () {
+  const isV2 = document.body.getAttribute('data-version') === 'v2';
+  const a = document.createElement('a');
+  a.className = 'ver-switch';
+  a.href = isV2 ? 'faithful.html' : 'index.html';
+  a.textContent = isV2 ? 'Voir V1 (fidèle)' : 'Voir V2 (marketing)';
+  document.body.appendChild(a);
+})();
+
 // Menu mobile (placeholder — le méga-menu sera défini plus tard)
 const burger = document.querySelector('.burger');
 if (burger) {

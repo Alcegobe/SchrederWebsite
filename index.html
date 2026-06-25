@@ -3,16 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Schréder — Homepage (Wireframe)</title>
-  <meta name="description" content="Wireframe de la nouvelle homepage Schréder — même contenu, présentation modernisée." />
+  <title>Schréder — Homepage V2 (Wireframe marketing)</title>
+  <meta name="description" content="Homepage V2 — wireframe appliquant les recommandations de l'audit marketing." />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
+<body data-version="v2">
   <a class="skip-link" href="#hero">Aller au contenu</a>
 
-  <!-- ============================================================= -->
-  <!-- BARRE PAYS (utility bar)                                       -->
-  <!-- ============================================================= -->
+  <!-- Barre pays -->
   <div class="utilbar" id="utilbar">
     <div class="container utilbar__inner">
       <span>Choose your country to have specific content related to your location</span>
@@ -22,12 +20,10 @@
     </div>
   </div>
 
-  <!-- ============================================================= -->
-  <!-- HEADER (placeholder — non traité à ce stade)                   -->
-  <!-- ============================================================= -->
+  <!-- Header (placeholder — logo à intégrer) -->
   <header class="site-header" id="header">
     <div class="container header__inner">
-      <div class="logo">
+      <div class="logo" title="Emplacement logo — fichier à fournir">
         <strong>Schréder</strong>
         <span class="logo__tag">Experts in lightability™</span>
       </div>
@@ -41,237 +37,265 @@
       </nav>
       <div class="header__actions">
         <span class="nav-item">Careers</span>
-        <span class="nav-item">About us</span>
         <span class="icon-btn" title="Search">⌕</span>
         <span class="icon-btn" title="Language">🌐</span>
-        <span class="icon-btn" title="Contact">✉</span>
+        <button class="btn btn--sm btn--primary">Talk to an expert</button>
       </div>
       <button class="burger" aria-label="Menu">≡</button>
     </div>
-    <p class="header__note">Header / méga-menu — non traité à ce stade (à définir ultérieurement)</p>
+    <p class="header__note">Header / méga-menu — non traité (CTA principal ajouté en attendant)</p>
   </header>
 
   <main>
     <!-- ============================================================= -->
-    <!-- 01 · HERO                                                      -->
+    <!-- 01 · HERO — proposition de valeur + preuve + CTA unique        -->
     <!-- ============================================================= -->
     <section class="hero section" id="hero" data-tag="01 · HERO">
-      <div class="hero__media ph" data-label="Visuel hero — hub de transport éclairé la nuit"></div>
+      <div class="hero__media ph" data-label="Visuel hero — rue/ville la nuit, lumière intelligente"></div>
       <div class="hero__overlay">
         <div class="container hero__content">
-          <p class="eyebrow">Schréder</p>
-          <h1>Sustainable &amp; Smart Lighting Solutions</h1>
-          <p class="lead">Light up your city, optimise your energy.</p>
-          <div class="btn-row">
-            <button class="btn btn--primary">Contact us</button>
-            <button class="btn btn--ghost-light">Discover our solutions</button>
-          </div>
-        </div>
-      </div>
-      <ul class="hero__social" aria-label="Réseaux sociaux">
-        <li class="ph-icon ph-icon--sm">in</li>
-        <li class="ph-icon ph-icon--sm">◎</li>
-        <li class="ph-icon ph-icon--sm">▶</li>
-      </ul>
-    </section>
-
-    <!-- ============================================================= -->
-    <!-- 02 · IN THE SPOTLIGHT                                          -->
-    <!-- ============================================================= -->
-    <section class="section spotlight" data-tag="02 · IN THE SPOTLIGHT">
-      <div class="container">
-        <h2 class="spotlight__title">In the Spotlight</h2>
-        <div class="spotlight__grid">
-          <!-- Carte campagne -->
-          <article class="promo">
-            <div class="promo__media ph" data-label="Visuel — Schréder SENSE ONE">
-              <div class="promo__badge">
-                <strong>Schréder</strong><br />SENSE ONE
-                <span class="promo__powered">powered by edgemachines</span>
-              </div>
-            </div>
-            <div class="promo__copy">
-              <p>Your lighting network. One multi-domain sensor. <strong>Endless insights.</strong></p>
-            </div>
-          </article>
-
-          <!-- Actu mise en avant (carousel) -->
-          <article class="feature-news">
-            <p class="eyebrow">Featured news</p>
-            <h3>Schréder acquires EdgeMachines to deliver smarter urban services and enhance city life</h3>
-            <p>
-              Following a successful year-long partnership deploying projects internationally,
-              this acquisition is a natural evolution driven by a shared vision to help cities
-              become more sustainable and resilient by providing real-time data.
-            </p>
-            <span class="link">Read more →</span>
-            <div class="dots" aria-hidden="true">
-              <span class="dot dot--on"></span><span class="dot"></span><span class="dot"></span>
-              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================= -->
-    <!-- 03 · WHAT'S NEW?                                               -->
-    <!-- ============================================================= -->
-    <section class="section whatsnew" data-tag="03 · WHAT'S NEW">
-      <div class="container">
-        <div class="section-head section-head--row">
-          <h2>What's New?</h2>
-          <button class="btn btn--ghost">All news →</button>
-        </div>
-        <div class="cards cards--3">
-          <a class="article">
-            <div class="ph article__media" data-label="BRITELINE — sport"></div>
-            <p class="article__meta">22 May 2026</p>
-            <h3>Bring professional-level lighting performance to your sports venue</h3>
-            <p class="article__body">
-              The BRITELINE floodlight range is now FIFA Quality Pro approved, giving sports venues
-              the confidence to meet the highest standards of professional lighting — with precise
-              light control and long-term operational value.
-            </p>
-            <span class="link">Read more →</span>
-          </a>
-          <a class="article">
-            <div class="ph article__media" data-label="ALTARA — off-grid"></div>
-            <p class="article__meta">10 April 2026</p>
-            <h3>ALTARA | 100% off-grid, zero infrastructure constraints</h3>
-            <p class="article__body">
-              ALTARA makes lighting projects possible without electrical infrastructure. Its decoupled
-              solar architecture separates the power unit from the light source for optimal solar
-              exposure, even in space-restricted locations.
-            </p>
-            <span class="link">Read more →</span>
-          </a>
-          <a class="article">
-            <div class="ph article__media" data-label="TFLEX GEN2 — tunnels"></div>
-            <p class="article__meta">9 April 2026</p>
-            <h3>TFLEX GEN2 redefines tunnel lighting flexibility</h3>
-            <p class="article__body">
-              A new generation of modular tunnel lighting designed for higher efficiency, simplified
-              operations and long-term sustainability — a complete, end-to-end solution from a single
-              trusted partner.
-            </p>
-            <span class="link">Read more →</span>
-          </a>
-        </div>
-        <div class="dots dots--center" aria-hidden="true">
-          <span class="dot dot--on"></span><span class="dot"></span><span class="dot"></span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================= -->
-    <!-- 04 · FEATURE — TRANSPORT HUBS (bande alternée)                 -->
-    <!-- ============================================================= -->
-    <section class="section feature" data-tag="04 · FEATURE — SEGMENT">
-      <div class="container feature__grid">
-        <div class="feature__media ph ph--tall" data-label="Hub de transport — gare / aéroport"></div>
-        <div class="feature__copy">
-          <p class="eyebrow">Markets</p>
-          <h2>Sustainable Lighting for your Transport Hubs</h2>
-          <p>
-            More than ever, people are on the move. At Schréder, we have been lighting outdoor spaces —
-            including ports, railway stations, airports and motorways — for decades. We listen to our
-            customers' requirements and find solutions that ensure safe and sustainable spaces that meet
-            expectations and standards.
+          <p class="eyebrow">Independent smart lighting leader · 70+ countries · since 1907</p>
+          <h1>Cut energy. Boost safety. Light cities people love.</h1>
+          <p class="lead">
+            Schréder designs and manages connected outdoor lighting that cuts energy use by
+            <strong>up to 80%</strong>, makes public spaces safer, and helps you reach net-zero —
+            as your <strong>independent</strong> partner from design to data.
           </p>
-          <button class="btn btn--primary">Discover our transport solutions</button>
+          <div class="btn-row">
+            <button class="btn btn--primary btn--lg">Get a free lighting assessment</button>
+            <button class="btn btn--ghost-light">See customer results →</button>
+          </div>
+          <p class="hero__proof">
+            Trusted in 70+ countries · 2M+ luminaires deployed every year · EcoVadis Gold 2025
+          </p>
         </div>
+      </div>
+      <p class="wf-note wf-note--onhero">↳ Corrige #1 proposition de valeur différenciante · #2 orientation client (« you ») · #3 preuve · #5 CTA principal unique + capture de lead</p>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 02 · BARRE DE PREUVE                                           -->
+    <!-- ============================================================= -->
+    <section class="section proofbar" data-tag="02 · PROOF">
+      <div class="container">
+        <p class="proofbar__intro">Chosen by cities, operators and contractors worldwide</p>
+        <div class="proofbar__logos">
+          <span class="ph-logo">Ville / client</span>
+          <span class="ph-logo">Ville / client</span>
+          <span class="ph-logo">Ville / client</span>
+          <span class="ph-logo">Ville / client</span>
+          <span class="ph-logo">Ville / client</span>
+        </div>
+        <div class="proofbar__stats">
+          <div class="kpi"><span class="kpi__num">70+</span><span class="kpi__label">pays</span></div>
+          <div class="kpi"><span class="kpi__num">2M+</span><span class="kpi__label">luminaires / an</span></div>
+          <div class="kpi"><span class="kpi__num">~80%</span><span class="kpi__label">d'énergie économisée</span></div>
+          <div class="kpi"><span class="kpi__num">Gold</span><span class="kpi__label">EcoVadis 2025 · 83/100</span></div>
+        </div>
+        <p class="wf-note">↳ Corrige #3 preuve / crédibilité (chiffres, logos, label) — le manque n°1 pour un acheteur public averse au risque</p>
       </div>
     </section>
 
     <!-- ============================================================= -->
-    <!-- 05 · PORTFOLIO COMPLET                                         -->
+    <!-- 03 · POURQUOI SCHRÉDER — bénéfices client (pas features)       -->
     <!-- ============================================================= -->
-    <section class="section portfolio" data-tag="05 · PORTFOLIO">
+    <section class="section valueprops" data-tag="03 · WHY SCHRÉDER">
       <div class="container">
         <div class="section-head">
-          <h2>A trusted partner with a complete portfolio</h2>
-          <p class="section-head__sub">
-            Working alongside you, we provide comprehensive solutions and expertise for long-lasting impact.
-          </p>
+          <p class="eyebrow">Why Schréder</p>
+          <h2>The outcomes you're actually buying</h2>
+          <p class="wf-note">↳ Corrige #2 message « inside-out » : on vend des résultats client, pas des caractéristiques</p>
         </div>
-      </div>
-      <div class="portfolio__scroller" id="portfolioScroller">
-        <div class="container portfolio__row">
-          <article class="pf-card">
-            <div class="ph pf-card__media" data-label="Poles & Brackets"></div>
-            <h3>Poles &amp; Brackets</h3>
-            <p>Sturdy poles and brackets to install in a safe and reliable manner.</p>
-            <span class="link">Read more →</span>
+        <div class="cards cards--3">
+          <article class="vp">
+            <div class="vp__icon ph-icon">↓</div>
+            <h3>Slash energy &amp; carbon</h3>
+            <p>Connected dimming and LightSync adapt light to real traffic and weather — typically
+              <strong>up to 80% energy saved</strong> and measurable CO₂ avoided.</p>
           </article>
-          <article class="pf-card">
-            <div class="ph pf-card__media" data-label="Smart Poles"></div>
-            <h3>Smart Poles</h3>
-            <p>Multi-functional smart poles for connected, future-ready public and private spaces.</p>
-            <span class="link">Read more →</span>
+          <article class="vp">
+            <div class="vp__icon ph-icon">◐</div>
+            <h3>Safer streets, protected nights</h3>
+            <p>The right light, where and when it's needed — improving safety while cutting light
+              pollution to protect people and ecosystems.</p>
           </article>
-          <article class="pf-card pf-card--active">
-            <div class="ph pf-card__media" data-label="Control Systems"></div>
-            <h3>Control Systems</h3>
-            <p>Smart lighting control to cut costs, boost efficiency and scale smart city infrastructure.</p>
-            <span class="link">Read more →</span>
-          </article>
-          <article class="pf-card">
-            <div class="ph pf-card__media" data-label="Solar"></div>
-            <h3>Solar</h3>
-            <p>Plug-and-play connected solar lighting solution for sustainable streets and outdoor spaces.</p>
-            <span class="link">Read more →</span>
-          </article>
-          <article class="pf-card">
-            <div class="ph pf-card__media" data-label="Retrofit Solutions"></div>
-            <h3>Retrofit Solutions</h3>
-            <p>Smart retrofit lighting to modernise existing fixtures, reduce energy use and extend asset life.</p>
-            <span class="link">Read more →</span>
+          <article class="vp">
+            <div class="vp__icon ph-icon">∞</div>
+            <h3>One independent partner</h3>
+            <p>Vendor-neutral, open and built to last. <strong>117 years</strong> of expertise,
+              end-to-end from design to data — no lock-in.</p>
           </article>
         </div>
-      </div>
-      <div class="container portfolio__nav">
-        <button class="round-btn" data-scroll="-1" aria-label="Précédent">‹</button>
-        <button class="round-btn" data-scroll="1" aria-label="Suivant">›</button>
       </div>
     </section>
 
     <!-- ============================================================= -->
-    <!-- 06 · FEATURE — PRESERVING ECOSYSTEMS (bande alternée)          -->
+    <!-- 04 · TROUVER SA SOLUTION — parcours par besoin + audience      -->
     <!-- ============================================================= -->
-    <section class="section feature feature--reverse" data-tag="06 · FEATURE — EXPERTISE">
+    <section class="section needs" data-tag="04 · FIND YOUR SOLUTION">
+      <div class="container">
+        <div class="section-head">
+          <h2>Where do you want to start?</h2>
+          <p class="section-head__sub">Tell us your goal — we'll take you straight to the right solution.</p>
+          <p class="wf-note">↳ Corrige #4 (la page ne cible personne) : entrées par besoin au lieu d'une taxonomie produit, + aiguillage par audience</p>
+        </div>
+        <div class="cards cards--grid">
+          <a class="need"><span class="need__ico ph-icon ph-icon--sm">€</span><h3>Reduce my energy bill</h3><span class="link">Explore →</span></a>
+          <a class="need"><span class="need__ico ph-icon ph-icon--sm">◇</span><h3>Build a smart city</h3><span class="link">Explore →</span></a>
+          <a class="need"><span class="need__ico ph-icon ph-icon--sm">→</span><h3>Light roads &amp; mobility safely</h3><span class="link">Explore →</span></a>
+          <a class="need"><span class="need__ico ph-icon ph-icon--sm">☀</span><h3>Go off-grid with solar</h3><span class="link">Explore →</span></a>
+          <a class="need"><span class="need__ico ph-icon ph-icon--sm">☾</span><h3>Preserve the night sky</h3><span class="link">Explore →</span></a>
+          <a class="need"><span class="need__ico ph-icon ph-icon--sm">↻</span><h3>Modernise / retrofit</h3><span class="link">Explore →</span></a>
+        </div>
+        <div class="audience">
+          <span class="audience__label">I'm a…</span>
+          <a class="chip">City &amp; municipality</a>
+          <a class="chip">Specifier &amp; engineer</a>
+          <a class="chip">Distributor &amp; installer</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 05 · PLATEFORME PHARE — orientée résultat                      -->
+    <!-- ============================================================= -->
+    <section class="section feature feature--reverse" data-tag="05 · FLAGSHIP">
       <div class="container feature__grid">
         <div class="feature__copy">
-          <p class="eyebrow">Expertise</p>
-          <h2>Preserving Ecosystems with Eco-Friendly Outdoor Lighting</h2>
+          <p class="eyebrow">Schréder EXEDRA</p>
+          <h2>See every light. Control every watt.</h2>
           <p>
-            Turning off cities at night is not a viable solution. Lighting is essential for the safety and
-            well-being of people as they move about for work or leisure. We need to create safe spaces to
-            sustain human activity at night, but it is also critical to preserve the surrounding natural
-            environment. With the right lighting expertise and solutions, getting the balance right is
-            entirely possible.
+            One secure platform to monitor consumption, adapt lighting in real time, and turn data
+            into <strong>kWh saved and CO₂ avoided</strong> — ISO/IEC 27001 certified, built on open standards.
           </p>
-          <button class="btn btn--primary">Discover more about our expertise</button>
+          <p class="metric-chip">Up to <strong>80%</strong> energy saved · payback from year one</p>
+          <button class="btn btn--primary">Discover the platform</button>
+          <p class="wf-note">↳ Corrige #2 (résultat plutôt que specs) + #3 (métrique de preuve)</p>
         </div>
-        <div class="feature__media ph ph--tall" data-label="Nature de nuit — biodiversité"></div>
+        <div class="feature__media ph ph--tall" data-label="Dashboard Schréder EXEDRA — kWh & CO₂"></div>
       </div>
     </section>
 
     <!-- ============================================================= -->
-    <!-- 07 · CONNECT WITH YOUR LOCAL CONTACT                           -->
+    <!-- 06 · RÉSULTATS PROUVÉS — études de cas chiffrées               -->
     <!-- ============================================================= -->
-    <section class="section localcontact" data-tag="07 · LOCAL CONTACT">
-      <div class="container localcontact__inner">
-        <h2>Connect with your local contact</h2>
-        <p class="lead">Our teams are present in over 70 countries to support your projects.</p>
-        <button class="btn btn--primary">Choose your country</button>
+    <section class="section cases" data-tag="06 · PROVEN RESULTS">
+      <div class="container">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow">Proven results</p>
+            <h2>Real cities. Measurable impact.</h2>
+          </div>
+          <button class="btn btn--ghost">All case studies →</button>
+        </div>
+        <p class="wf-note">↳ Corrige #3 (preuve) : remplace les actus « we launched X » par des projets nommés avec résultats</p>
+        <div class="cards cards--3">
+          <a class="case">
+            <div class="ph case__media" data-label="Ville A — réseau routier"></div>
+            <div class="case__body">
+              <span class="case__metric">−62% énergie</span>
+              <h3>City A — city-wide road network</h3>
+              <p>Connected LED + EXEDRA, deployed in 2 years. Lower bills, fewer outages.</p>
+              <span class="link">Read the case study →</span>
+            </div>
+          </a>
+          <a class="case">
+            <div class="ph case__media" data-label="Ville B — parcs & piéton"></div>
+            <div class="case__body">
+              <span class="case__metric">−40% pollution lumineuse</span>
+              <h3>City B — parks &amp; pedestrian areas</h3>
+              <p>Adaptive, dark-sky friendly lighting that improved safety and biodiversity.</p>
+              <span class="link">Read the case study →</span>
+            </div>
+          </a>
+          <a class="case">
+            <div class="ph case__media" data-label="Ville C — rural / off-grid"></div>
+            <div class="case__body">
+              <span class="case__metric">€0 coût réseau</span>
+              <h3>City C — rural, off-grid roads</h3>
+              <p>ALTARA solar deployed in weeks, with zero electrical infrastructure.</p>
+              <span class="link">Read the case study →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 07 · DURABILITÉ — pilier chiffré                               -->
+    <!-- ============================================================= -->
+    <section class="section sustainability" data-tag="07 · SUSTAINABILITY">
+      <div class="container sustainability__grid">
+        <div class="sustainability__copy">
+          <p class="eyebrow">Sustainability</p>
+          <h2>Sustainability you can prove</h2>
+          <p class="lead">
+            Aligned with the Paris Agreement and independently rated. Every connected luminaire
+            reports the impact it delivers — in kWh, CO₂ and lighting classes.
+          </p>
+          <button class="btn btn--primary">Read our sustainability report</button>
+          <p class="wf-note">↳ Corrige #3 + transforme l'atout n°1 (durabilité) en pilier chiffré, pas en intention</p>
+        </div>
+        <div class="sustainability__stats">
+          <div class="kpi kpi--invert"><span class="kpi__num">Gold</span><span class="kpi__label">EcoVadis 2025 · 83/100</span></div>
+          <div class="kpi kpi--invert"><span class="kpi__num">−52,5%</span><span class="kpi__label">Scope 1 &amp; 2 d'ici 2030</span></div>
+          <div class="kpi kpi--invert"><span class="kpi__num">−27,5%</span><span class="kpi__label">Scope 3 d'ici 2030</span></div>
+          <div class="kpi kpi--invert"><span class="kpi__num">Dark-sky</span><span class="kpi__label">solutions respectueuses du ciel nocturne</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 08 · INSIGHTS — un seul module d'actu (consolidé)              -->
+    <!-- ============================================================= -->
+    <section class="section insights" data-tag="08 · INSIGHTS">
+      <div class="container">
+        <div class="section-head section-head--row">
+          <h2>Latest insights</h2>
+          <button class="btn btn--ghost">All insights →</button>
+        </div>
+        <p class="wf-note">↳ Corrige : fusionne les 2 modules d'actu concurrents (Spotlight + What's New) en un seul, titres orientés bénéfice</p>
+        <div class="cards cards--3">
+          <a class="article">
+            <div class="ph article__media" data-label="Insight 1"></div>
+            <span class="tag">Guide</span>
+            <h3>How to cut street-lighting energy by 80% without compromising safety</h3>
+            <p class="article__meta">Lecture · 6 min</p>
+          </a>
+          <a class="article">
+            <div class="ph article__media" data-label="Insight 2"></div>
+            <span class="tag">Étude de cas</span>
+            <h3>What a connected lighting rollout really costs — and pays back</h3>
+            <p class="article__meta">Lecture · 5 min</p>
+          </a>
+          <a class="article">
+            <div class="ph article__media" data-label="Insight 3"></div>
+            <span class="tag">Livre blanc</span>
+            <h3>Dark-sky lighting: protecting biodiversity while keeping cities safe</h3>
+            <p class="article__meta">Téléchargement</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- 09 · CTA FINAL — conversion                                    -->
+    <!-- ============================================================= -->
+    <section class="section cta" data-tag="09 · FINAL CTA">
+      <div class="container cta__inner">
+        <h2>Let's light your city — together</h2>
+        <p class="lead">Talk to a Schréder expert in your country. No obligation, just expert advice
+          on energy savings, safety and sustainability.</p>
+        <div class="btn-row btn-row--center">
+          <button class="btn btn--primary btn--lg">Talk to an expert</button>
+          <button class="btn btn--ghost-light">Choose your country</button>
+        </div>
+        <p class="wf-note">↳ Corrige #5 : CTA fort et orienté valeur, en bas de l'entonnoir</p>
       </div>
     </section>
   </main>
 
-  <!-- ============================================================= -->
-  <!-- FOOTER                                                         -->
-  <!-- ============================================================= -->
+  <!-- Footer -->
   <footer class="site-footer" data-tag="FOOTER">
     <div class="container">
       <div class="footer__top">
@@ -287,26 +311,12 @@
           <li class="ph-icon ph-icon--sm ph-icon--invert">P</li>
         </ul>
       </div>
-
       <div class="footer__grid">
-        <nav class="footer__col">
-          <h4>Solutions &amp; Expertise</h4>
-          <span>Solutions</span><span>Products</span><span>Services</span><span>Sustainability</span>
-        </nav>
-        <nav class="footer__col">
-          <h4>Inspiration</h4>
-          <span>Projects</span><span>Insights</span><span>Knowledge</span>
-        </nav>
-        <nav class="footer__col">
-          <h4>Schréder</h4>
-          <span>Who We Are</span><span>Our Commitment</span><span>Careers</span><span>Contact Us</span>
-        </nav>
-        <nav class="footer__col">
-          <h4>Tools</h4>
-          <span>Downloads</span><span>Smart Label Portal</span><span>Software &amp; Plug-ins</span><span>Brochures</span>
-        </nav>
+        <nav class="footer__col"><h4>Solutions &amp; Expertise</h4><span>Solutions</span><span>Products</span><span>Services</span><span>Sustainability</span></nav>
+        <nav class="footer__col"><h4>Inspiration</h4><span>Projects</span><span>Insights</span><span>Knowledge</span></nav>
+        <nav class="footer__col"><h4>Schréder</h4><span>Who We Are</span><span>Our Commitment</span><span>Careers</span><span>Contact Us</span></nav>
+        <nav class="footer__col"><h4>Tools</h4><span>Downloads</span><span>Smart Label Portal</span><span>Software &amp; Plug-ins</span><span>Brochures</span></nav>
       </div>
-
       <div class="footer__legal">
         <span>Privacy Policy</span><span>Cookies Policy</span><span>Terms of Use</span>
         <span>Code of Conduct for Suppliers</span><span>Win Line</span><span>Manage Cookies</span>
@@ -315,9 +325,7 @@
     </div>
   </footer>
 
-  <!-- Toggle annotations wireframe -->
   <button class="wf-toggle" id="wfToggle" aria-pressed="true">Annotations : ON</button>
-
   <script src="js/main.js"></script>
 </body>
 </html>
