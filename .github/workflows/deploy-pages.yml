@@ -33,7 +33,6 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html _site/
-          cp faithful.html _site/
           cp -r css _site/
           cp -r js _site/
           if [ -d assets ]; then cp -r assets _site/; fi
