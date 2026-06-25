@@ -453,9 +453,9 @@ body[data-version="v2"] .site-header .logo strong { color: #fff; }
 body[data-version="v2"] .site-header .logo__tag { color: rgba(255,255,255,.72); }
 body[data-version="v2"] .site-header:not(.scrolled) .logo.has-logo-img .logo__img { filter: invert(1) brightness(2.4); }
 body[data-version="v2"] .site-header.scrolled {
-  background: rgba(255,255,255,.92);
-  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
-  border-bottom-color: var(--line);
+  background: rgba(255,255,255,.70);
+  -webkit-backdrop-filter: blur(16px) saturate(140%); backdrop-filter: blur(16px) saturate(140%);
+  border-bottom-color: rgba(212,212,216,.6);
 }
 body[data-version="v2"] .site-header.scrolled .nav-item,
 body[data-version="v2"] .site-header.scrolled .icon-btn { color: var(--ink-2); }
