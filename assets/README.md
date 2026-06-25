@@ -2,6 +2,17 @@
 
 Déposez ici les fichiers de marque.
 
+## Images de fond (hero & sustainability)
+
+Déposez (mêmes étapes que ci-dessous) :
+
+```
+assets/hero.jpg            → fond du hero (.jpg / .png / .webp acceptés)
+assets/sustainability.jpg  → fond de la section sustainability (nature / nuit)
+```
+
+Tant qu'une image est absente, un fond dégradé de repli s'affiche.
+
 ## Logo
 
 La maquette charge automatiquement deux variantes :
