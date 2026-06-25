@@ -10,7 +10,9 @@ marque, typographies, visuels).
 - `index.html` — la homepage
 - `css/styles.css` — styles (palette neutre wireframe, responsive)
 - `js/main.js` — interactions (toggle annotations, scroll portfolio, barre pays, menu mobile placeholder)
-- `docs/analyse-marketing-homepage.md` — **audit marketing critique** du contenu de la homepage
+- `.github/workflows/deploy-pages.yml` — déploiement de la maquette sur GitHub Pages
+
+> L'audit marketing de la homepage est conservé comme livrable hors-dépôt (non versionné ici).
 
 Ouvrir `index.html` dans un navigateur. Le bouton en bas à droite
 **« Annotations : ON/OFF »** masque/affiche les repères de wireframe.
@@ -40,7 +42,7 @@ Ouvrir `index.html` dans un navigateur. Le bouton en bas à droite
 
 ## Prochaines étapes possibles
 
-1. Appliquer les recommandations de `docs/analyse-marketing-homepage.md`.
+1. Appliquer les recommandations de l'audit marketing.
 2. Identité visuelle (couleurs Schréder, typographies, iconographie).
 3. Header / méga-menu.
 4. Intégration de vrais visuels et contenus.
