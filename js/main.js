@@ -14,6 +14,31 @@ document.querySelectorAll('.logo').forEach((logo) => {
   logo.prepend(img);
 });
 
+// Méga-menu (desktop) : ouverture au survol / focus, fermeture différée
+document.querySelectorAll('.nav-item--mega').forEach((item) => {
+  const mega = item.querySelector('.mega');
+  if (!mega) return;
+  let t;
+  const open = () => {
+    clearTimeout(t);
+    document.querySelectorAll('.nav-item--mega.open').forEach((o) => { if (o !== item) o.classList.remove('open'); });
+    item.classList.add('open');
+  };
+  const close = () => { t = setTimeout(() => item.classList.remove('open'), 140); };
+  item.addEventListener('mouseenter', open);
+  item.addEventListener('mouseleave', close);
+  item.addEventListener('focusin', open);
+  item.addEventListener('focusout', close);
+  mega.addEventListener('mouseenter', () => clearTimeout(t));
+  mega.addEventListener('mouseleave', close);
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') document.querySelectorAll('.nav-item--mega.open').forEach((o) => o.classList.remove('open'));
+});
+window.addEventListener('scroll', () => {
+  document.querySelectorAll('.nav-item--mega.open').forEach((o) => o.classList.remove('open'));
+}, { passive: true });
+
 // Header : transparent sur le hero, solide au défilement
 const siteHeader = document.querySelector('.site-header');
 if (siteHeader) {
