@@ -620,3 +620,52 @@ body[data-version="v2"] .site-header.scrolled .burger { color: var(--ink); }
 
 /* CTA du menu mobile : blanc pour contraste sur le verre sombre */
 .mobile-menu .btn--primary { background: #fff; color: var(--ink); border-color: #fff; }
+
+/* =============================================================
+   EXEDRA mock v2 — fidèle à l'interface réelle (thème clair)
+   ============================================================= */
+.exedra-ui {
+  display: grid; grid-template-columns: 46px 1fr; min-height: 330px;
+  transform: rotateY(-14deg) rotateX(5deg); transform-origin: left center;
+  border-radius: 14px; overflow: hidden; font-size: 11px; line-height: 1.3;
+  background: #eef1f5; color: #2b3340; border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 44px 90px rgba(15,23,42,.35), 0 10px 26px rgba(15,23,42,.22);
+}
+.exedra-rail { background: #15233f; display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 12px 0; }
+.exedra-rail__logo { width: 22px; height: 22px; border-radius: 6px; background: #2bb6a8; color: #fff; display: grid; place-items: center; font-weight: 600; font-size: 12px; }
+.exedra-rail__ico { width: 18px; height: 18px; border-radius: 5px; background: rgba(255,255,255,.14); }
+.exedra-rail__ico.is-active { background: #2bb6a8; }
+
+.exedra-main { display: flex; flex-direction: column; min-width: 0; background: #f5f7fa; }
+.exedra-top { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: #fff; border-bottom: 1px solid #e6e9ef; }
+.exedra-top__title { font-weight: 600; font-size: 13px; color: #1f2a3d; }
+.exedra-top__tabs { display: flex; gap: 8px; margin-left: 6px; }
+.exedra-top__tabs i { width: 26px; height: 6px; border-radius: 3px; background: #dfe3ea; }
+.exedra-top__tabs i.is-on { background: #2bb6a8; }
+.exedra-top__search { margin-left: auto; width: 120px; height: 22px; border-radius: 6px; background: #eef1f5; border: 1px solid #e1e5ec; }
+
+.exedra-cols { display: grid; grid-template-columns: 1.15fr .85fr; flex: 1; min-height: 0; }
+.exedra-list { padding: 10px; display: flex; flex-direction: column; gap: 7px; background: #f5f7fa; overflow: hidden; }
+.exedra-lh { display: flex; gap: 8px; padding: 0 8px 2px; }
+.exedra-lh span { height: 5px; border-radius: 3px; background: #dfe3ea; }
+.exedra-lh span:nth-child(1) { width: 38%; } .exedra-lh span:nth-child(2) { flex: 1; } .exedra-lh span:nth-child(3) { width: 30px; }
+.exedra-li { display: flex; align-items: center; gap: 8px; background: #fff; border: 1px solid #e9ecf2; border-radius: 7px; padding: 8px; }
+.exedra-li .dot { width: 7px; height: 7px; border-radius: 50%; flex: none; }
+.exedra-li .nm { height: 6px; border-radius: 3px; background: #d7dce4; flex: 1; }
+.exedra-li .bdg { font-size: 9px; font-weight: 600; padding: 2px 7px; border-radius: 999px; letter-spacing: .02em; flex: none; }
+.dot--ok { background: #2fae66; } .dot--warn { background: #f1a23b; } .dot--off { background: #e2574d; }
+.bdg--ok { background: #e3f6ec; color: #1f9254; } .bdg--warn { background: #fdf0dd; color: #b9772a; } .bdg--off { background: #fbe4e2; color: #c23b32; }
+
+.exedra-map { position: relative; background: linear-gradient(180deg, #e7ecf2, #dde5ee); border-left: 1px solid #e6e9ef; overflow: hidden; }
+.exedra-map::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(120,140,170,.16) 1px, transparent 1px), linear-gradient(90deg, rgba(120,140,170,.16) 1px, transparent 1px); background-size: 26px 26px; }
+.exedra-map::after { content: ""; position: absolute; left: -10%; right: -10%; top: 56%; height: 13px; background: rgba(255,255,255,.65); transform: rotate(-8deg); }
+.exedra-map .pin { position: absolute; width: 12px; height: 12px; border-radius: 50% 50% 50% 0; background: #2bb6a8; transform: translate(-50%, -100%) rotate(-45deg); box-shadow: 0 2px 4px rgba(0,0,0,.25); }
+.exedra-map .pin--sel { background: #15233f; width: 15px; height: 15px; }
+.exedra-map__ctrl { position: absolute; right: 8px; top: 8px; display: flex; flex-direction: column; gap: 3px; }
+.exedra-map__ctrl i { width: 16px; height: 14px; border-radius: 3px; background: #fff; border: 1px solid #dfe3ea; }
+
+@media (max-width: 980px) {
+  .exedra-ui { transform: none; min-height: 300px; }
+  .exedra-mock { -webkit-mask-image: none; mask-image: none; max-width: 100%; }
+  .exedra-stage { perspective: none; min-height: 0; }
+}
