@@ -702,6 +702,7 @@ body[data-version="v2"] .site-header.scrolled .burger { color: var(--ink); }
 .mega__card { text-decoration: none; color: var(--ink); }
 .mega__card-media { min-height: 168px; border-radius: 12px; margin-bottom: 14px; transition: transform .16s ease, box-shadow .16s ease; }
 .mega__card:hover .mega__card-media { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(15,23,42,.16); }
-.mega__card span { font-size: 1.02rem; }
+.mega__card .mega__card-t { display: block; font-size: 1.02rem; font-weight: 400; }
+.mega__card .mega__card-s { display: block; font-size: .86rem; color: var(--ink-2); margin-top: 4px; line-height: 1.4; }
 
 @media (max-width: 980px) { .mega { display: none; } }
